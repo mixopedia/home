@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://themegrilldemos.com/colormag-dark/contact-us/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let r;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",r=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(r){e["rocket"+t]=n=r}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+
+<!--this script responsible for logos and icons in the page-->
+<script src="https://kit.fontawesome.com/33ded9c143.js" crossorigin="anonymous"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<title>Contact Us – MixoPedia</title><link rel="preload" as="style" href="https://mixopedia.000webhostapp.com/files/css/css"><link rel="stylesheet" href="https://mixopedia.000webhostapp.com/files/css/css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A400%2C600&#038;display=swap" /></noscript>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="ColorMag Dark » Feed" href="https://themegrilldemos.com/colormag-dark/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.18.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No UA code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mixopedia.000webhostapp.com/files/css/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code>code{font-family:Menlo,Consolas,monaco,monospace;color:#1e1e1e;padding:.8em 1em;border:1px solid #ddd;border-radius:4px}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-group:where(.has-background){padding:1.25em 2.375em}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto;opacity:.4}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<link rel="stylesheet" id="blockart-blocks-css" href="https://mixopedia.000webhostapp.com/files/css/style-blocks.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="dashicons-css" href="https://mixopedia.000webhostapp.com/files/css/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="everest-forms-general-css" href="https://mixopedia.000webhostapp.com/files/css/everest-forms.css" type="text/css" media="all">
+<link rel="stylesheet" id="colormag_style-css" href="https://mixopedia.000webhostapp.com/files/css/style.css" type="text/css" media="all">
+<style id="colormag_style-inline-css" type="text/css">
+.colormag-button,blockquote,button,input[type=reset],input[type=button],input[type=submit],#masthead.colormag-header-clean #site-navigation.main-small-navigation .menu-toggle,.fa.search-top:hover,#masthead.colormag-header-classic #site-navigation.main-small-navigation .menu-toggle,.main-navigation ul li.focus > a,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.focus > a,.home-icon.front_page_on,.main-navigation a:hover,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor>a,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current-menu-item>a,.main-navigation ul li.current_page_ancestor>a,.main-navigation ul li.current_page_item>a,.main-navigation ul li:hover>a,.main-small-navigation li a:hover,.site-header .menu-toggle:hover,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li:hover > a,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-ancestor > a,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-item > a,#masthead .main-small-navigation li:hover > a,#masthead .main-small-navigation li.current-page-ancestor > a,#masthead .main-small-navigation li.current-menu-ancestor > a,#masthead .main-small-navigation li.current-page-item > a,#masthead .main-small-navigation li.current-menu-item > a,.main-small-navigation .current-menu-item>a,.main-small-navigation .current_page_item > a,.promo-button-area a:hover,#content .wp-pagenavi .current,#content .wp-pagenavi a:hover,.format-link .entry-content a,.pagination span,.comments-area .comment-author-link span,#secondary .widget-title span,.footer-widgets-area .widget-title span,.colormag-footer--classic .footer-widgets-area .widget-title span::before,.advertisement_above_footer .widget-title span,#content .post .article-content .above-entry-meta .cat-links a,.page-header .page-title span,.entry-meta .post-format i,.more-link,.no-post-thumbnail,.widget_featured_slider .slide-content .above-entry-meta .cat-links a,.widget_highlighted_posts .article-content .above-entry-meta .cat-links a,.widget_featured_posts .article-content .above-entry-meta .cat-links a,.widget_featured_posts .widget-title span,.widget_slider_area .widget-title span,.widget_beside_slider .widget-title span,.wp-block-quote,.wp-block-quote.is-style-large,.wp-block-quote.has-text-align-right{background-color:#ff3f5a;}#site-title a,.next a:hover,.previous a:hover,.social-links i.fa:hover,a,#masthead.colormag-header-clean .social-links li:hover i.fa,#masthead.colormag-header-classic .social-links li:hover i.fa,#masthead.colormag-header-clean .breaking-news .newsticker a:hover,#masthead.colormag-header-classic .breaking-news .newsticker a:hover,#masthead.colormag-header-classic #site-navigation .fa.search-top:hover,#masthead.colormag-header-classic #site-navigation.main-navigation .random-post a:hover .fa-random,.dark-skin #masthead.colormag-header-classic #site-navigation.main-navigation .home-icon:hover .fa,#masthead .main-small-navigation li:hover > .sub-toggle i,.better-responsive-menu #masthead .main-small-navigation .sub-toggle.active .fa,#masthead.colormag-header-classic .main-navigation .home-icon a:hover .fa,.pagination a span:hover,#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover,.comment .comment-reply-link:hover,.nav-next a,.nav-previous a,.footer-widgets-area a:hover,a#scroll-up i,#content .post .article-content .entry-title a:hover,.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,.post .entry-title a:hover,.search .entry-title a:hover,.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,.entry-meta .tag-links a:hover,.single #content .tags a:hover,.post-box .entry-meta .cat-links a:hover,.post-box .entry-meta .posted-on a:hover,.post.post-box .entry-title a:hover,.widget_featured_slider .slide-content .below-entry-meta .byline a:hover,.widget_featured_slider .slide-content .below-entry-meta .comments a:hover,.widget_featured_slider .slide-content .below-entry-meta .posted-on a:hover,.widget_featured_slider .slide-content .entry-title a:hover,.byline a:hover,.comments a:hover,.edit-link a:hover,.posted-on a:hover,.tag-links a:hover,.widget_highlighted_posts .article-content .below-entry-meta .byline a:hover,.widget_highlighted_posts .article-content .below-entry-meta .comments a:hover,.widget_highlighted_posts .article-content .below-entry-meta .posted-on a:hover,.widget_highlighted_posts .article-content .entry-title a:hover,.widget_featured_posts .article-content .entry-title a:hover,.related-posts-main-title .fa,.single-related-posts .article-content .entry-title a:hover{color:#ff3f5a;}#site-navigation{border-top-color:#ff3f5a;}#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li:hover,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-ancestor,#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-item,#masthead.colormag-header-classic #site-navigation .menu-toggle,#masthead.colormag-header-classic #site-navigation .menu-toggle:hover,#masthead.colormag-header-classic .main-navigation ul > li:hover > a,#masthead.colormag-header-classic .main-navigation ul > li.current-menu-item > a,#masthead.colormag-header-classic .main-navigation ul > li.current-menu-ancestor > a,#masthead.colormag-header-classic .main-navigation ul li.focus > a,.promo-button-area a:hover,.pagination a span:hover{border-color:#ff3f5a;}#secondary .widget-title,.footer-widgets-area .widget-title,.advertisement_above_footer .widget-title,.page-header .page-title,.widget_featured_posts .widget-title,.widget_slider_area .widget-title,.widget_beside_slider .widget-title{border-bottom-color:#ff3f5a;}@media (max-width:768px){.better-responsive-menu .sub-toggle{background-color:#e1213c;}}.elementor .elementor-widget-wrap .tg-module-wrapper .module-title{border-bottom-color:#ff3f5a;}.elementor .elementor-widget-wrap .tg-module-wrapper .module-title span,.elementor .elementor-widget-wrap .tg-module-wrapper .tg-post-category{background-color:#ff3f5a;}.elementor .elementor-widget-wrap .tg-module-wrapper .tg-module-meta .tg-module-comments a:hover,.elementor .elementor-widget-wrap .tg-module-wrapper .tg-module-meta .tg-post-auther-name a:hover,.elementor .elementor-widget-wrap .tg-module-wrapper .tg-module-meta .tg-post-date a:hover,.elementor .elementor-widget-wrap .tg-module-wrapper .tg-module-title:hover a,.elementor .elementor-widget-wrap .tg-module-wrapper.tg-module-grid .tg_module_grid .tg-module-info .tg-module-meta a:hover{color:#ff3f5a;}
+</style>
+<link rel="stylesheet" id="colormag_dark_style-css" href="https://mixopedia.000webhostapp.com/files/css/dark.css" type="text/css" media="all">
+<link rel="stylesheet" id="colormag-fontawesome-css" href="https://mixopedia.000webhostapp.com/Contact_Us_files/font-awesome.min.css" type="text/css" media="all">
+
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.migrate.min.js.download" id="jquery-migrate-js"></script>
+<!--[if lte IE 8]>
+<script type='text/javascript' src='https://themegrilldemos.com/colormag-dark/wp-content/themes/colormag/js/html5shiv.min.js?ver=2.1.0' id='html5-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://themegrilldemos.com/colormag-dark/wp-json/"><link rel="alternate" type="application/json" href="https://themegrilldemos.com/colormag-dark/wp-json/wp/v2/pages/394"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://themegrilldemos.com/colormag-dark/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://themegrilldemos.com/colormag-dark/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.9.1">
+<meta name="generator" content="Everest Forms 1.8.3">
+<link rel="canonical" href="https://mixopedia.000webhostapp.com/ContactUs/">
+<link rel="shortlink" href="https://themegrilldemos.com/colormag-dark/?p=394">
+<link rel="alternate" type="application/json+oembed" href="https://themegrilldemos.com/colormag-dark/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemegrilldemos.com%2Fcolormag-dark%2Fcontact-us%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://themegrilldemos.com/colormag-dark/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemegrilldemos.com%2Fcolormag-dark%2Fcontact-us%2F&amp;format=xml">
+<link rel="icon" href="https://themegrilldemos.com/colormag-dark/wp-content/uploads/sites/69/2020/07/tg-logo.jpg" sizes="32x32">
+<link rel="icon" href="https://themegrilldemos.com/colormag-dark/wp-content/uploads/sites/69/2020/07/tg-logo.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://themegrilldemos.com/colormag-dark/wp-content/uploads/sites/69/2020/07/tg-logo.jpg">
+<meta name="msapplication-TileImage" content="https://themegrilldemos.com/colormag-dark/wp-content/uploads/sites/69/2020/07/tg-logo.jpg">
+<link href="https://mixopedia.000webhostapp.com/files/js/jquery.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.migrate.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.bxslider.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.newsTicker.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/Contact_Us_files/navigation.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.fitvids.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/Contact_Us_files/skip-link-focus-fix.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/Contact_Us_files/colormag-custom.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.inputmask.bundle.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/files/js/jquery.validate.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/Contact_Us_files/everest-forms.min.js.download" rel="preload" as="script"><link href="https://mixopedia.000webhostapp.com/Contact_Us_files/mailcheck.min.js.download" rel="preload" as="script"><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><!--Google Adsense -->                         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7109887473775667"
+     crossorigin="anonymous"></script>    <!--Google Adsense -->             </head>
+
+<body data-rsssl="1" class="page-template page-template-page-templates page-template-contact page-template-page-templatescontact-php page page-id-394 wp-custom-logo wp-embed-responsive everest-forms-js right-sidebar wide dark-skin elementor-default elementor-kit-402">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>		<div id="page" class="hfeed site">
+				<a class="skip-link screen-reader-text" href="https://themegrilldemos.com/colormag-dark/contact-us/#main">Skip to content</a>
+				<header id="masthead" class="site-header clearfix ">
+				<div id="header-text-nav-container" class="clearfix">
+
+			<div class="news-bar">
+				<div class="inner-wrap clearfix">
+
+		<div class="date-in-header">
+			Wednesday, February 23, 2022		</div>
+
+
+		<div class="breaking-news">
+			<strong class="breaking-news-latest">Latest:</strong>
+
+			<ul class="newsticker" style="height: 20px; overflow: hidden;"><li style="margin-top: -7.33098px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/man-arrested-with-two-guns/" title="Councils Tighten Security After Far-right Protest">
+							Councils Tighten Security After Far-right Protest						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/the-best-photographs-of-barack-obamas-presidency-in-pictures/" title="The Best Photographs of Barack Obama’s Presidency – In Pictures">
+							The Best Photographs of Barack Obama’s Presidency – In Pictures						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/canon-eos-700d-launched-with-18-megapixel-image-sensor/" title="Canon EOS 700D Launched With 18-megapixel Image Sensor">
+							Canon EOS 700D Launched With 18-megapixel Image Sensor						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/5-musicians-we-want-to-hear-from-in-2017/" title="The 10 Most Exciting New Artists Who Are Going to Blow Up in 2018">
+							The 10 Most Exciting New Artists Who Are Going to Blow Up in 2018						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/councils-tighten-security-after-far-right-protest/" title="Man Arrested With Two Guns">
+							Man Arrested With Two Guns						</a>
+					</li>
+
+
+
+
+
+							</ul>
+		</div>
+
+
+		<div class="social-links clearfix">
+
+						<ul>
+							<li><a href="https://www.facebook.com/MnpMediaCenter/" target="_blank"><i class="fa fa-facebook"></i></a>
+							<li><a href="https://twitter.com/TechmixM" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/mnavas313/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://in.pinterest.com/mnavas313/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCQ1il34_5uAjafynwVrZNpQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/mnavasp/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+						</ul>
+
+
+		</div><!-- .social-links -->
+						</div>
+			</div>
+
+
+		<div class="inner-wrap">
+			<div id="header-text-nav-wrap" class="clearfix">
+
+				<div id="header-left-section">
+											<div id="header-logo-image">
+							<a href="https://mixopedia.000webhostapp.com/" class="custom-logo-link" rel="home"><img width="253" height="90" src="https://mixopedia.000webhostapp.com/files/png/mixopedia_main_logo.png" class="custom-logo" alt="ColorMag Dark"></a>						</div><!-- #header-logo-image -->
+
+					<div id="header-text" class="screen-reader-text">
+													<h3 id="site-title">
+								<a href="https://mixopedia.000webhostapp.com/" title="ColorMag Dark" rel="home">ColorMag Dark</a>
+							</h3>
+
+													<p id="site-description">
+								Provides live coverage and analysis of breaking news, as well as a full range of international, technology, political, business, entertainment, sports, health, science and weather coverage.						</p><!-- #site-description -->
+											</div><!-- #header-text -->
+				<div id="header-right-section">
+				    <script data-cfasync="false" type="text/javascript" src="//geniusdexchange.com/a/display.php?r=5642182"></script>
+
+				    <!-- this script responsible for ads by adcash mnp
+				    <script type="text/javascript" data-adel="atag" src="//acscdn.com/script/atg.js" czid="7eiivn8ors"></script>
+				    -->
+
+				    <!--
+											<div id="header-right-sidebar" class="clearfix">
+							<aside id="colormag_728x90_advertisement_widget-1" class="widget widget_728x90_advertisement clearfix">
+		<div class="advertisement_728x90">
+			<div class="advertisement-content"><img src="https://mixopedia.000webhostapp.com/files/jpg/728-90-1.png" width="728" height="90" alt=""></div>		</div>
+
+		</aside>						</div>
+
+					-->
+										</div><!-- #header-right-section -->
+			</div><!-- #header-text-nav-wrap -->
+		</div><!-- .inner-wrap -->
+
+
+		<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+			<div class="inner-wrap clearfix">
+
+									<div class="search-random-icons-container">
+													<div class="top-search-wrap">
+								<i class="fa fa-search search-top"></i>
+								<div class="search-form-top">
+
+<form action="https://mixopedia.000webhostapp.com/" class="search-form searchform clearfix" method="get" role="search">
+
+	<div class="search-wrap">
+		<input type="search" class="s field" name="s" value="" placeholder="Search">
+
+		<button class="search-icon" type="submit"></button>
+	</div>
+
+</form><!-- .searchform -->
+								</div>
+							</div>
+											</div>
+
+				<p class="menu-toggle"></p>
+				<div class="menu-primary-container"><ul id="menu-primary" class="menunav-menu" aria-expanded="false"><li id="menu-item-375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-375"><a href="https://mixopedia.000webhostapp.com/">Home</a></li>
+<li id="menu-item-381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-381"><a href="https://mixopedia.000webhostapp.com/News/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="https://mixopedia.000webhostapp.com/News/World/">World</a></li>
+	<li id="menu-item-382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382"><a href="https://mixopedia.000webhostapp.com/News/Politics/">Politics</a></li>
+	<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://mixopedia.000webhostapp.com/News/Sports/">Sports</a></li>
+</ul>
+</li>
+<li id="menu-item-385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385"><a href="https://mixopedia.000webhostapp.com/Tech/">Technology</a></li>
+<li id="menu-item-378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378"><a href="https://mixopedia.000webhostapp.com/Entertainment/">Entertainment</a></li>
+<li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-379"><a href="https://mixopedia.000webhostapp.com/Fashion/">Fashion</a></li>
+<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380"><a href="https://mixopedia.000webhostapp.com/Travel/">Travel</a></li>
+<li id="menu-item-377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-377"><a href="https://mixopedia.000webhostapp.com/Food & health/">Food &amp; Health</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://mixopedia.000webhostapp.com/ContactUs/"aria-current="page">Contact</a></li>
+</ul></div>
+			</div>
+		</nav>
+
+				</div><!-- #header-text-nav-container -->
+				</header><!-- #masthead -->
+				<div id="main" class="clearfix">
+				<div class="inner-wrap clearfix">
+
+	<div id="primary">
+		<div id="content" class="clearfix">
+
+<article id="post-394" class="post-394 page type-page status-publish hentry">
+
+
+	<header class="entry-header">
+					<h1 class="entry-title">
+				Contact Us			</h1>
+			</header>
+
+	<div class="entry-content clearfix">
+		<p>This contact form is created using <a href="https://wpeverest.com/wordpress-plugins/everest-forms/" target="_blank" rel="noopener">Everest Forms</a>. To download this contact form plugin click <a href="https://downloads.wordpress.org/plugin/everest-forms.zip" rel="nofollow">here</a>.</p>
+<p>This contact form is just for demo purpose. If you have any theme related support questions, please put your query in our support forum <a href="http://themegrill.com/support-forum/" target="_blank" rel="noopener noreferrer">http://themegrill.com/support-forum/</a>.<br>
+And if you have any theme related sales questions or if you just want to say hello, please send your message via our contact page <a href="http://themegrill.com/contact/" target="_blank" rel="noopener noreferrer">http://themegrill.com/contact/</a>.<br>
+</p><div class="everest-forms"><div class="evf-container default" id="evf-368"><form id="evf-form-368" class="everest-form" data-formid="368" data-ajax_submission="0" method="post" enctype="multipart/form-data" action="https://mixopedia.000webhostapp.com/ContactUs/" novalidate="novalidate"><div class="evf-field-container"><input type="hidden" id="_wpnonce" name="_wpnonce" value="3f22962c18"><input type="hidden" name="_wp_http_referer" value="/colormag-dark/contact-us/"><div class="evf-frontend-row" data-row="row_1"><div class="evf-frontend-grid evf-grid-1" data-grid="grid_1"><div id="evf-368-field_lVizlNhYus-1-container" class="evf-field evf-field-text form-row validate-required" data-required-field-message="This field is required." data-field-id="lVizlNhYus-1"><label class="evf-field-label" for="evf-368-field_lVizlNhYus-1"><span class="evf-label">Name</span> <abbr class="required" title="Required">*</abbr></label><input type="text" id="evf-368-field_lVizlNhYus-1" class="input-text" name="everest_forms[form_fields][lVizlNhYus-1]" required=""></div><div id="evf-368-field_XYnMdkQDKM-3-container" class="evf-field evf-field-email form-row validate-required validate-email" data-required-field-message="Please enter a valid email address." data-field-id="XYnMdkQDKM-3"><label class="evf-field-label" for="evf-368-field_XYnMdkQDKM-3"><span class="evf-label">Email</span> <abbr class="required" title="Required">*</abbr></label><input type="email" id="evf-368-field_XYnMdkQDKM-3" class="input-text" name="everest_forms[form_fields][XYnMdkQDKM-3]" required=""></div><div id="evf-368-field_xJivsqAS2c-2-container" class="evf-field evf-field-text form-row validate-required" data-required-field-message="This field is required." data-field-id="xJivsqAS2c-2"><label class="evf-field-label" for="evf-368-field_xJivsqAS2c-2"><span class="evf-label">Subject</span> <abbr class="required" title="Required">*</abbr></label><input type="text" id="evf-368-field_xJivsqAS2c-2" class="input-text" name="everest_forms[form_fields][xJivsqAS2c-2]" required=""></div><div id="evf-368-field_YalaPcQ0DO-4-container" class="evf-field evf-field-textarea form-row" data-field-id="YalaPcQ0DO-4"><label class="evf-field-label" for="evf-368-field_YalaPcQ0DO-4"><span class="evf-label">Message</span> </label><textarea id="evf-368-field_YalaPcQ0DO-4" class="input-text" name="everest_forms[form_fields][YalaPcQ0DO-4]"></textarea></div></div></div></div><div class="evf-submit-container "><input type="hidden" name="everest_forms[id]" value="368"><input type="hidden" name="everest_forms[author]" value="2"><input type="hidden" name="everest_forms[post_id]" value="394"><button type="submit" name="everest_forms[submit]" class="everest-forms-submit-button button evf-submit " id="evf-submit-368" value="evf-submit" data-process-text="Processing…" conditional_rules="&quot;&quot;" conditional_id="evf-submit-368">Submit</button></div></form></div><!-- .evf-container --></div><p></p>
+	</div>
+
+	<div class="entry-footer">
+			</div>
+
+	</article>
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+<div id="secondary">
+
+	<aside class="widget widget_text clearfix"><h3 class="widget-title"><span>Example Widget</span></h3>			<div class="textwidget"><p>This is an example widget to show how the Contact Page Sidebar looks by default. You can add custom widgets from the widgets screen in the admin. If custom widgets are added then this will be replaced by those widgets.</p>
+</div>
+		</aside>
+	</div>
+		</div><!-- .inner-wrap -->
+				</div><!-- #main -->
+				<footer id="colophon" class="clearfix ">
+
+<div class="footer-widgets-wrapper">
+	<div class="inner-wrap">
+		<div class="footer-widgets-area clearfix">
+			<div class="tg-footer-main-widget">
+				<div class="tg-first-footer-widget">
+					<aside id="text-1" class="widget widget_text clearfix">			<div class="textwidget"><p><img loading="lazy" class="alignnone size-full wp-image-263" src="https://mixopedia.000webhostapp.com/files/png/mixopedia_main_logo.png" alt="" width="193" height="25"></p>
+<p>under construction.</p>
+<p>under construction</p>
+</div>
+		</aside>				</div>
+			</div>
+
+			<div class="tg-footer-other-widgets">
+				<div class="tg-second-footer-widget">
+
+		<aside id="recent-posts-4" class="widget widget_recent_entries clearfix">
+		<h3 class="widget-title"><span>Recent</span></h3>
+		<ul>
+											<li>
+					<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/the-best-photographs-of-barack-obamas-presidency-in-pictures/">The Best Photographs of Barack Obama’s Presidency – In Pictures</a>
+									</li>
+											<li>
+					<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/canon-eos-700d-launched-with-18-megapixel-image-sensor/">Canon EOS 700D Launched With 18-megapixel Image Sensor</a>
+									</li>
+											<li>
+					<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/5-musicians-we-want-to-hear-from-in-2017/">The 10 Most Exciting New Artists Who Are Going to Blow Up in 2018</a>
+									</li>
+											<li>
+					<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/councils-tighten-security-after-far-right-protest/">Man Arrested With Two Guns</a>
+									</li>
+					</ul>
+
+		</aside>				</div>
+		<!--
+			<div class="tg-third-footer-widget">
+				<aside id="categories-4" class="widget widget_categories clearfix"><h3 class="widget-title"><span>Categories</span></h3>
+		<ul>
+				<li class="cat-item cat-item-2"><a href="https://themegrilldemos.com/colormag-dark/category/entertainment/">Entertainment</a>
+</li>
+<li class="cat-item cat-item-3"><a href="https://themegrilldemos.com/colormag-dark/category/fashion/">Fashion</a>
+</li>
+<li class="cat-item cat-item-4"><a href="https://themegrilldemos.com/colormag-dark/category/food-health/">Food &amp; Health</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://themegrilldemos.com/colormag-dark/category/news/">News</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://themegrilldemos.com/colormag-dark/category/news/politics/">Politics</a>
+</li>
+<li class="cat-item cat-item-7"><a href="https://themegrilldemos.com/colormag-dark/category/news/sports/">Sports</a>
+</li>
+<li class="cat-item cat-item-8"><a href="https://themegrilldemos.com/colormag-dark/category/technology/">Technology</a>
+</li>
+<li class="cat-item cat-item-9"><a href="https://themegrilldemos.com/colormag-dark/category/travel/">Travel</a>
+</li>
+<li class="cat-item cat-item-10"><a href="https://themegrilldemos.com/colormag-dark/category/news/world/">World</a>
+</li>
+		</ul>
+
+		</aside>				</div>
+
+-->
+
+				<div class="tg-fourth-footer-widget">
+					<aside id="media_gallery-1" class="widget widget_media_gallery clearfix"><h3 class="widget-title"><span>Gallery</span></h3><div id="gallery-1" class="gallery galleryid-394 gallery-columns-3 gallery-size-thumbnail"><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/girl-hand/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/girl-hand-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/ladies/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/ladies-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/cyclng/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/cyclng-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/scuba-diving/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/scuba-diving-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/chocolate-muffin/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/chocolate-muffin-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/sleeping/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/sleeping-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/meat/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/meat-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/fashion-show/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/fashion-show-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="https://themegrilldemos.com/colormag-dark/party/"><img width="150" height="150" src="https://mixopedia.000webhostapp.com/files/jpg/party-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></a>
+			</div></figure>
+		</div>
+</aside>				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="footer-socket-wrapper clearfix">
+			<div class="inner-wrap">
+				<div class="footer-socket-area">
+
+		<div class="footer-socket-right-section">
+
+		<div class="social-links clearfix">
+
+			<ul>
+				<li><a href="https://www.facebook.com/MnpMediaCenter/" target="_blank"><i class="fa fa-facebook"></i></a>
+				<li><a href="https://twitter.com/TechmixM" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://www.instagram.com/mnavas313/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://in.pinterest.com/mnavas313/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCQ1il34_5uAjafynwVrZNpQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/mnavasp/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+			</ul>
+
+		</div><!-- .social-links -->
+				</div>
+
+				<div class="footer-socket-left-section">
+			<div class="copyright">Copyright © 2022 <a href="https://mixopedia.000webhostapp.com/" title="MixoPedia"><span>MixoPedia</span></a>. All rights reserved.</div>		</div>
+				</div><!-- .footer-socket-area -->
+					</div><!-- .inner-wrap -->
+		</div><!-- .footer-socket-wrapper -->
+				</footer><!-- #colophon -->
+				<a href="https://themegrilldemos.com/colormag-dark/contact-us/#masthead" id="scroll-up" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+				</div><!-- #page -->
+			<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace( /everest-forms-no-js/, 'everest-forms-js' );
+		document.body.className = c;
+	</script>
+	<script type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|(\/[^\/]+)?\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/themegrilldemos.com\/colormag-dark","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.bxslider.min.js.download" id="colormag-bxslider-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.newsTicker.min.js.download" id="colormag-news-ticker-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/navigation.min.js.download" id="colormag-navigation-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.fitvids.min.js.download" id="colormag-fitvids-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/skip-link-focus-fix.min.js.download" id="colormag-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/colormag-custom.min.js.download" id="colormag-custom-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.inputmask.bundle.min.js.download" id="inputmask-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/jquery.validate.min.js.download" id="jquery-validate-js"></script>
+<script type="text/javascript" id="everest-forms-js-extra">
+/* <![CDATA[ */
+var everest_forms_params = {"ajax_url":"\/colormag-dark\/wp-admin\/admin-ajax.php","submit":"Submit","disable_user_details":"no","everest_forms_data_save":"5ad5b51bca","i18n_messages_required":"This field is required.","i18n_messages_url":"Please enter a valid URL.","i18n_messages_email":"Please enter a valid email address.","i18n_messages_email_suggestion":"Did you mean {suggestion}?","i18n_messages_email_suggestion_title":"Click to accept this suggestion.","i18n_messages_confirm":"Field values do not match.","i18n_messages_check_limit":"You have exceeded number of allowed selections: {#}.","i18n_messages_number":"Please enter a valid number.","i18n_no_matches":"No matches found","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/everest-forms.min.js.download" id="everest-forms-js"></script>
+<script type="text/javascript" src="https://mixopedia.000webhostapp.com/files/js/mailcheck.min.js.download" id="mailcheck-js"></script>
+
+
+
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->             <!-- adcash outo tag-->    <script type="text/javascript" data-adel="atag" src="//acacdn.com/script/atg.js" czid="s8ddds50k"></script> <!--adcash outo tag-->                </body></html>

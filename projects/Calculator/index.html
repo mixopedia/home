@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://mixopedia.000webhostapp.com/projects/Calculator/style.css">
+    <link rel="stylesheet" href="https://mixopedia.000webhostapp.com/projects/Calculator/style1.css">
+    <script src="https://mixopedia.000webhostapp.com/projects/Calculator/script.js"></script>
+    <!--this script responsible for logos and icons in the page-->
+    <script src="https://kit.fontawesome.com/33ded9c143.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-body">
+        	<div class="inner-wrap clearfix">
+
+		<div class="date-in-header">
+			Wednesday, February 23, 2022		</div>
+
+
+		<div class="breaking-news">
+			<strong class="breaking-news-latest">Latest:</strong>
+
+			<ul class="newsticker" style="height: 20px; overflow: hidden;"><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/man-arrested-with-two-guns/" title="Councils Tighten Security After Far-right Protest">
+							Councils Tighten Security After Far-right Protest						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://mixopedia.000webhostapp.com/UN_Over_50,000_people_fled_Ukraine_in_less_than_48_hours.html" title="The Best Photographs of Barack Obama’s Presidency – In Pictures">
+							The Best Photographs of Barack Obama’s Presidency – In Pictures						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/canon-eos-700d-launched-with-18-megapixel-image-sensor/" title="Canon EOS 700D Launched With 18-megapixel Image Sensor">
+							Canon EOS 700D Launched With 18-megapixel Image Sensor						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/5-musicians-we-want-to-hear-from-in-2017/" title="The 10 Most Exciting New Artists Who Are Going to Blow Up in 2018">
+							The 10 Most Exciting New Artists Who Are Going to Blow Up in 2018						</a>
+					</li><li style="margin-top: 0px;">
+						<a href="https://themegrilldemos.com/colormag-dark/2017/12/26/councils-tighten-security-after-far-right-protest/" title="Man Arrested With Two Guns">
+							Man Arrested With Two Guns						</a>
+					</li>
+
+
+
+
+
+							</ul>
+		</div>
+
+
+		<div class="social-links clearfix">
+
+						<ul>
+							<li><a href="https://www.facebook.com/MnpMediaCenter/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							</li><li><a href="https://twitter.com/TechmixM" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/mnavas313/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://in.pinterest.com/mnavas313/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCQ1il34_5uAjafynwVrZNpQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/mnavasp/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+						</ul>
+
+
+		</div><!-- .social-links -->
+						</div>
+						
+		
+        <div class="calculator">
+            <div class="inner-box">
+                <div class="inner-box1">
+                    <div class="display">
+                        
+                            <input type="text" id="screen">
+                
+                    </div>
+                    <div class="buttons">
+                        <div class="raw1">
+                            <button class="buttonL glossy-button" onclick="buttonclick()" >MC</button>
+                            <button class="button glossy-button" onclick="buttonclick()">MR</button>
+                            <button class="button glossy-button" onclick="buttonclick()">M+</button>
+                            <button class="button glossy-button" onclick="clearbutton()">C</button>
+                            <button class="buttonR glossy-button backspace" onclick="backspace()">&#10510</button> <!-- BackSpace-->
+                            
+                        </div>
+                        <div class="raw">
+                            <button class="buttonL glossy-button" onclick="buttonclick(7)">7</button>
+                            <button class="button glossy-button" onclick="buttonclick(8)">8</button>
+                            <button class="button glossy-button" onclick="buttonclick(9)">9</button>
+                            <button class="button glossy-button" onclick="divclick()">&#247</button><!--Division Button-->
+                            <button class="buttonR glossy-button" onclick="buttonclick()">R</button>
+                        </div>
+                        <div class="raw">
+                            <button class="buttonL glossy-button" onclick="buttonclick(4)">4</button>
+                            <button class="button glossy-button" onclick="buttonclick(5)">5</button>
+                            <button class="button glossy-button" onclick="buttonclick(6)">6</button>
+                            <button class="button glossy-button" onclick="mulclick()">&#215</button><!--Multiplication -->
+                            <button class="buttonR glossy-button" onclick="buttonclick(%)">%</button>
+                        </div>
+                        <div class="raw">
+                            <button class="buttonL glossy-button" onclick="buttonclick(1)">1</button>
+                            <button class="button glossy-button" onclick="buttonclick(2)">2</button>
+                            <button class="button glossy-button" onclick="buttonclick(3)">3</button>
+                            <button class="button glossy-button" onclick="plusclick()">&#43</button><!--plus-->
+                            <button class="buttonR glossy-button" onclick="minusclick()">&#8722</button><!--minuss-->
+                        </div>
+                        <div class="raw">
+                            <button class="buttonL glossy-button" onclick="buttonclick(0)">0</button>
+                            <button class="button glossy-button" onclick="buttonclick('.')">.</button>
+                            <button class="button glossy-button" onclick="buttonclick('00')">00</button>
+                            <button class="button equal-button glossy-button"  onclick="equalbutton()">&#61</button><!--equal-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
