@@ -8,8 +8,54 @@
 
 
 <url>
-  <loc>https://mixopedia.000webhostapp.com/</loc>
-  <lastmod>2022-03-16T10:00:31+00:00</lastmod>
+  <loc>https://mixopedia.github.io/home/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/news/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/news/world/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/news/politics/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/news/sports/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/tech/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/entertainment/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/fashion/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/travel/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mixopedia.github.io/home/contact-us/</loc>
+  <lastmod>2022-06-01T11:22:59+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
